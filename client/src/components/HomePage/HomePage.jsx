@@ -87,16 +87,16 @@ const HomePage = () => {
                 <div className="md:mx-8 rounded-xl py-4 px-8">
                     <div className="md:grid grid-cols-4 gap-4">
                         <div className="bg-yellow-800 rounded shadow-md md:my-0 my-2">
-                            <img src="https://wallpapercave.com/wp/ppd85lw.jpg" alt="" />
+                            <img src="https://wallpapercave.com/wp/ppd85lw.jpg" alt="h-40 w-auto" />
                         </div>
                         <div className="bg-white rounded shadow-md md:my-0 my-2">
-                            <img src="https://wallpapercave.com/wp/ppd85lw.jpg" alt="" />
+                            <img src="https://wallpapercave.com/wp/IZvciio.jpg" alt="h-40 w-auto" />
                         </div>
                         <div className="bg-white rounded shadow-md md:my-0 my-2">
-                            <img src="https://wallpapercave.com/wp/ppd85lw.jpg" alt="" />
+                            <img src="https://wallpapercave.com/wpt/cgAiyMd.jpg" alt="h-40 w-auto" />
                         </div>
                         <div className="bg-yellow-800 rounded shadow-md md:my-0 my-2">
-                            <img src="https://wallpapercave.com/wp/ppd85lw.jpg" alt="" />
+                            <img src="https://wallpapercave.com/wp/1Pm7E5e.jpg" alt="h-40 w-auto" />
                         </div>
                     </div>
                 </div>
