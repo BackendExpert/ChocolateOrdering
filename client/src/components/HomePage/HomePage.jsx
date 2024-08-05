@@ -1,6 +1,6 @@
 import React from 'react'
 import BgImg from '../../assets/BgImg.jpg'
-import { BsAwardFill, BsGiftFill, BsTruck } from 'react-icons/bs'
+import { BsAwardFill, BsGiftFill, BsMapFill, BsTruck } from 'react-icons/bs'
 
 const HomePage = () => {
     const styles = {
@@ -86,18 +86,59 @@ const HomePage = () => {
             <div className="py-4 z-40 relative">
                 <div className="md:mx-8 rounded-xl py-4 px-8">
                     <div className="md:grid grid-cols-4 gap-4">
-                        <div className="bg-yellow-800 rounded shadow-md md:my-0 my-2">
-                            <img src="https://wallpapercave.com/wp/ppd85lw.jpg" alt="h-40 w-auto" />
+                        <div className="bg-yellow-800 rounded-3xl shadow-md md:my-0 my-2 text-white">
+                            <img src="https://wallpapercave.com/wp/0XoBRq7.jpg" alt="h-40 w-auto" />
+                            <h1 className="text-center py-4 text-xl font-semibold">Best Products</h1>
+                            <p className="p-4 text-center">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, repudiandae neque. Iusto numquam illo, sapiente quidem quo minus amet, cum, eius nisi iste exercitationem sunt qui doloribus. Non, dicta maiores.
+                            </p>
+
+                            <button className='bg-white text-yellow-800 py-2 px-8 my-4 mx-8 rounded font-semibold'>
+                                View Store
+                            </button>
                         </div>
-                        <div className="bg-white rounded shadow-md md:my-0 my-2">
-                            <img src="https://wallpapercave.com/wp/IZvciio.jpg" alt="h-40 w-auto" />
+                        <div className="bg-white rounded-3xl shadow-md md:my-0 my-2 text-yellow-800 ">
+                            <img src="https://wallpapercave.com/wp/A2pEVm6.jpg" alt="h-40 w-auto " />
+                            <h1 className="text-center py-4 text-xl font-semibold">Large Store</h1>
+                            <p className="p-4 text-center">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, repudiandae neque. Iusto numquam illo, sapiente quidem quo minus amet, cum, eius nisi iste exercitationem sunt qui doloribus. Non, dicta maiores.
+                            </p>
+
+                            <button className='bg-yellow-800 text-white py-2 px-8 my-4 mx-8 rounded'>
+                                View More
+                            </button>
                         </div>
-                        <div className="bg-white rounded shadow-md md:my-0 my-2">
-                            <img src="https://wallpapercave.com/wpt/cgAiyMd.jpg" alt="h-40 w-auto" />
+                        <div className="bg-white rounded-3xl shadow-md md:my-0 my-2 text-yellow-800">
+                            <img src="https://wallpapercave.com/wp/QYvdtbz.jpg" alt="h-40 w-auto" />
+                            <h1 className="text-center py-4 text-xl font-semibold">Fast Delivery</h1>
+                            <p className="p-4 text-center">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, repudiandae neque. Iusto numquam illo, sapiente quidem quo minus amet, cum, eius nisi iste exercitationem sunt qui doloribus. Non, dicta maiores.
+                            </p>
+
+                            <button className='bg-yellow-800 text-white py-2 px-8 my-4 mx-8 rounded'>
+                                View More
+                            </button>
                         </div>
-                        <div className="bg-yellow-800 rounded shadow-md md:my-0 my-2">
+                        <div className="bg-yellow-800 rounded-3xl shadow-md md:my-0 my-2 text-white">
                             <img src="https://wallpapercave.com/wp/1Pm7E5e.jpg" alt="h-40 w-auto" />
+                            <h1 className="text-center py-4 text-xl font-semibold">Best Gifts</h1>
+                            <p className="p-4 text-center">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, repudiandae neque. Iusto numquam illo, sapiente quidem quo minus amet, cum, eius nisi iste exercitationem sunt qui doloribus. Non, dicta maiores.
+                            </p>
+
+                            <button className='bg-white text-yellow-800 py-2 px-8 my-4 mx-8 rounded font-semibold'>
+                                Browse Gifts
+                            </button>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='z-40 md:mt-20 mt-24 md:mx-10 mx-2 relative rounded-3xl border-2 border-white border-yellow-800  bg-yellow-800 bg-center bg-cover h-full'>
+                <div className="py-8 px-6">                        
+                    <div className="flex justify-between text-white">
+                        <p className="">Copyright © 2024 BestChocos</p>
+                        <p className="">Developed By JehanKandy</p>
                     </div>
                 </div>
             </div>
