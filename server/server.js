@@ -6,10 +6,12 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 
+const AuthRoute = require('./Routes/AuthRoute')
+
 const app = express();
 const PORT = process.env.PORT || 5000
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_ATLES_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -19,7 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/uploads', express.static('uploads'));
 
-
+app.use('/auth', AuthRoute)
 
 app.listen(PORT, () => {
     console.log(`Server Running on PORT ${PORT}`)
