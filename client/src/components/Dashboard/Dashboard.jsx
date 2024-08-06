@@ -12,33 +12,7 @@ const Dashboard = () => {
     const EmailUser = secureLocalStorage.getItem("Login1");
     const RoleUser = secureLocalStorage.getItem("Login2");
 
-    const [chatOpen, SetchatOpen] = useState(false)
 
-    const headleOpenChat = () => {
-        SetchatOpen(true)
-    }
-
-    const ChatMenu = [
-        {id: 1, name: 'How to Start a Company'},
-        {id: 2, name: 'How Find a Job'},
-        {id: 3, name: 'How to add Skills or Project'},
-    ]
-
-    const ChatMenuData = [
-        {id: 1, name: 'Click Start Company button on Dashboard'},
-        {id: 2, name: 'How Find a Job'},
-        {id: 3, name: 'How to add Skills or Project'},
-    ]
-
-    const [MenuID, SetMenuID] = useState(0)
-    const headleStartChat = (id) => {
-        SetMenuID(id)
-    }
-
-    const headleCloseChat = () => {
-        SetchatOpen(false)
-        SetMenuID(0)
-    }
 
     if(RoleUser !== null && EmailUser !== null){
         return (
