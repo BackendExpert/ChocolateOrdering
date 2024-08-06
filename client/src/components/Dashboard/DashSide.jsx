@@ -38,20 +38,20 @@ const DashSide = () => {
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className=''>
-                <button className="md:hidden fixed top-4 right-4 z-50 bg-purple-600 text-white p-2 rounded font-semibold" onClick={toggleSidebar}>
+                <button className="md:hidden fixed top-4 right-4 z-50 bg-yellow-800 text-white p-2 rounded font-semibold" onClick={toggleSidebar}>
                     {
                         !isOpen ? <BsList /> : <BsX />
                     }
                 </button>
         
-                <div className={`rounded shadow-md md:mt-4 py-4 px-4 md:min-w-64 md:max-w-64 bg-white w-full md:w-auto md:min-h-screen md:relative fixed overflow-auto top-0 left-0 h-full w-auto transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out`}>
+                <div className={`rounded shadow-md md:min-w-74 md:max-w-64 w-full md:w-auto h-full md:relative fixed overflow-auto top-0 left-0 h-full transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out`}>
                     <div className="">
-                        <div className="">
+                        <div className="bg-white py-4 px-4 rounded shadow-md">
                             {
                                 SideMenu.map((menu, index) => {
                                     return (
                                         <a href={menu.link}>
-                                            <div className="duration-500 py-2 hover:bg-purple-200  my-2 pl-4 rounded text-purple-500" key={index}>
+                                            <div className="duration-200 hover:bg-yellow-800 hover:text-white py-2  my-2 pl-4 rounded text-yellow-800" key={index}>
                                                 <div className="flex duration-500 hover:pl-2">
                                                     <div className="text-xl pr-2">{menu.icon}</div>
                                                     <p className="">{menu.name}</p>
@@ -62,8 +62,12 @@ const DashSide = () => {
                                 })
                             }
                         </div>
+                        <div className="my-4 bg-white py-4 px-6 rounded shadow-md">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi nobis quam corporis distinctio possimus in? Dignissimota aspernatur quidem eos et explicabo.
+                        </div>
                     </div>
                 </div>
+
                 
             </div>
           )
