@@ -10,6 +10,7 @@ const Nav = () => {
         {id: 1, name: "Home", link: "/"},
         {id: 2, name: "Discounts", link: ""},
         {id: 3, name: "Products", link: "ProductStore"},
+        {id: 3, name: "Gifts", link: ""},
     ]
 
 
