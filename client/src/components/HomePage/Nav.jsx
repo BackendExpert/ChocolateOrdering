@@ -7,9 +7,9 @@ const Nav = () => {
     const [navOpen, SetNavOpen] = useState(false)
 
     const NavList = [
-        {id: 1, name: "Home", link: ""},
+        {id: 1, name: "Home", link: "/"},
         {id: 2, name: "Discounts", link: ""},
-        {id: 3, name: "Products", link: ""},
+        {id: 3, name: "Products", link: "ProductStore"},
     ]
 
 
@@ -32,9 +32,11 @@ const Nav = () => {
             <ul className={`rounded-xl md:hidden block md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-yellow-800 md:z-auto z-[-1] left-0 md:pl-0 pl-9 transition-all duration-500 ease-in mx-4 right-2 ${navOpen ? 'top-28 ':'top-[-490px]'}`}>
                 {
                     NavList.map((link)=>(
-                        <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
-                        <a href={link.link} className='text-gray-white duration-200 hover:border-b border-white cursor-pointer'>{link.name}</a>
-                        </li>
+                        <a href={link.link}>
+                            <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
+                            <p className='text-gray-white duration-200 hover:border-b border-white cursor-pointer'>{link.name}</p>
+                            </li>
+                        </a>
                     ))
                 }
                     <div className="flex">
@@ -50,9 +52,11 @@ const Nav = () => {
                     {
                         NavList.map((nav, index) => {
                             return (
-                                <div key={index} className="mx-2 duration-200 hover:border-b border-white cursor-pointer">
-                                    {nav.name}
-                                </div>
+                                <a href={nav.link} className="">
+                                    <div key={index} className="mx-2 duration-200 hover:border-b border-white cursor-pointer">
+                                        {nav.name}
+                                    </div>
+                                </a>
                             )
                         })
                     }
