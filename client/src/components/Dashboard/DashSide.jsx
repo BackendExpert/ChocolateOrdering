@@ -46,31 +46,6 @@ const DashSide = () => {
         
                 <div className={`rounded shadow-md md:mt-4 py-4 px-4 md:min-w-64 md:max-w-64 bg-white w-full md:w-auto md:min-h-screen md:relative fixed overflow-auto top-0 left-0 h-full w-auto transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out`}>
                     <div className="">
-                        <div class="w-full flex justify-center">
-                            {
-                                (() => {
-                                    if(JobFinderData.image === ''){
-                                        return (
-                                            <img src="https://cdn-icons-png.flaticon.com/128/10813/10813372.png" alt="" className='h-32 w-auto rounded-full' />
-                                            // https://cdn-icons-png.flaticon.com/128/13098/13098372.png
-                                        )
-                                    }
-                                    else if(JobFinderData.image !== ''){
-                                        return (
-                                            <img src={'http://localhost:5000/' + JobFinderData.image} alt="ssssssssssssss" className="h-44 w-auto rounded-full" />
-                                        )
-                                    }
-                                })()
-                            }
-                                                       
-                        </div>
-                        <div className="text-center text-purple-500">
-
-                            <h1 className='mt-4 font-semibold text-xl'>{JobFinderData.fname} {JobFinderData.lname}</h1>
-                            <p className="text-sm">{JobFinderData.job}</p>
-                        </div>
-                        <hr className='my-2'/>
-        
                         <div className="">
                             {
                                 SideMenu.map((menu, index) => {
