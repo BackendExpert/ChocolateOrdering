@@ -40,10 +40,12 @@ const Nav = () => {
                         </a>
                     ))
                 }
+                <a href="SignIn">
                     <div className="flex">
                         <BsPerson  className='h-6 w-auto'/>
                         <p className="">SignIn</p>
                     </div>
+                </a>
             </ul>
             <div className="md:block hidden md:flex md:justify-between">
                 <div className="">
@@ -63,10 +65,12 @@ const Nav = () => {
                     }
                 </div>
                 <div className="">
-                    <div className="flex">
-                        <BsPerson  className='h-6 w-auto'/>
-                        <p className="">SignIn</p>
-                    </div>
+                    <a href="SignIn">
+                        <div className="flex">
+                            <BsPerson  className='h-6 w-auto'/>
+                            <p className="">SignIn</p>
+                        </div>
+                    </a>
                 </div>
             </div>
             

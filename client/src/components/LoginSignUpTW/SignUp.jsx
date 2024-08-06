@@ -3,7 +3,9 @@ import { BsMortarboardFill } from "react-icons/bs";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
+
 const SignUp = () => {
+
     const navigate = useNavigate()
      // for login data
     const [SignUpData, SetSignUpData] = useState({
@@ -19,7 +21,7 @@ const SignUp = () => {
         // signup to system
 
         try{
-            const res = await axios.post('http://localhost:5000/auth/SignUp', SignUpData)
+            const res = await axios.post(`${import.meta.env.VITE_SERVER_API}/auth/SignUp`, SignUpData)
             .then(res => {
                 if(res.data.Status === "Success"){
                     alert("Registation Successfull")
