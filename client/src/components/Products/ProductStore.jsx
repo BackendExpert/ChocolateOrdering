@@ -1,6 +1,7 @@
 import React from 'react'
 import BgImg from '../../assets/BgImg.jpg'
 import { BsCartFill, BsFacebook, BsHouseFill } from 'react-icons/bs'
+import Footer from '../HomePage/Footer'
 
 
 const ProductStore = () => {
@@ -91,6 +92,7 @@ const ProductStore = () => {
 
 
         </div>
+        <Footer />
 
     </div>
   )

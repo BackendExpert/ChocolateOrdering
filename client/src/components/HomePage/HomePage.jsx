@@ -1,6 +1,7 @@
 import React from 'react'
 import BgImg from '../../assets/BgImg.jpg'
 import { BsAwardFill, BsGiftFill, BsMapFill, BsTruck } from 'react-icons/bs'
+import Footer from './Footer'
 
 const HomePage = () => {
     const styles = {
@@ -133,18 +134,8 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-
-            <div className='z-40 md:mt-20 mt-24 md:mx-10 mx-2 relative rounded-3xl border-2 border-white border-yellow-800  bg-yellow-800 bg-center bg-cover h-full'>
-                <div className="py-8 px-6">                        
-                    <div className="flex justify-between text-white">
-                        <p className="">Copyright © 2024 BestChocos</p>
-                        <p className="">Developed By JehanKandy</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
-
+        <Footer />
     </div>
   )
 }
