@@ -15,15 +15,18 @@ const DashHome = () => {
           <h1 className="text-xl font-semibold text-yellow-800">Dashboard</h1>
 
           <div className="md:flex">
-            <div className="md:w-1/4 text-center">
+            <div className="md:w-1/4 ">
               <div className="bg-white py-4 px-8 rounded shadow-md mt-4">
                 <center><BsCurrencyDollar className='h-36 w-auto text-yellow-800 '/></center>
-                <h1 className="pt-4 pb-1 text-xl font-semibold text-yellow-900">Monthly Income</h1>
+                <h1 className="pt-4 pb-1 text-xl font-semibold text-yellow-900 text-center">Monthly Income</h1>
                 <h1 className="pt-1 pb-3 text-center text-2xl font-semibold text-yellow-900">$1500.00</h1>
                 <p className=""></p>
               </div>
-              <div className="bg-white my-2 py-4 px-6 rounded shadow-md">
-                <h1 className="text-xl font-semibold text-yellow-800">Trending Chocolets</h1>
+              <div className="bg-white my-2 py-4 px-6 rounded shadow-md bg-yellow-800/20">
+                <div className=" py-2 pl-2 rounded border-l-4 border-yellow-800">
+                  <h1 className="text-xl font-semibold text-yellow-800">Trending Chocolets</h1>
+                  <h1 className=" font-semibold text-yellow-800">By Customers</h1>
+                </div>
               </div>
             </div>
 
