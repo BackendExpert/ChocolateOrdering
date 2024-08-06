@@ -1,6 +1,6 @@
 import React from 'react'
 import BgImg from '../../assets/BgImg.jpg'
-import ProductNav from './ProductNav'
+
 
 const ProductStore = () => {
     const styles = {
@@ -28,7 +28,7 @@ const ProductStore = () => {
         </div>
         <div className="">
             <div className='z-40 md:mt-16 mt-24 md:mx-10 mx-2 relative rounded-3xl bg-center bg-cover'>
-                <ProductNav />
+                
             </div>
             <div className='z-40 md:mt-8 mt-24 md:mx-10 mx-2 relative rounded-3xl bg-center bg-cover'>
                 <div className="md:grid grid-cols-4 gap-4">
