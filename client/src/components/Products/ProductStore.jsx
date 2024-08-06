@@ -35,7 +35,7 @@ const ProductStore = () => {
                     {
                         ProductData.map((product, index) => {
                             return(
-                                <div className="bg-white py-8 px-4 shadow-md rounded-xl" key={index}>
+                                <div className="bg-white py-8 px-4 shadow-md rounded-xl md:my-0 my-2" key={index}>
                                     <div className="flex justify-center items-center">
                                         <img src={product.Image} alt="Centered" className="max-w-full h-40" />
                                     </div>
