@@ -7,7 +7,7 @@ import HomePage from "./components/HomePage/HomePage";
 import Nav from "./components/HomePage/Nav";
 import ProductStore from "./components/Products/ProductStore";
 import DashHome from "./components/Dashboard/DashHome";
-import  secureLocalStorage  from  "react-secure-storage"
+
 
 function AppWrapper() {
   const location = useLocation();

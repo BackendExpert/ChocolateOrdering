@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
-import { BsList, BsPerson, BsX } from 'react-icons/bs'
+import { BsList, BsPerson, BsSpeedometer, BsX } from 'react-icons/bs'
+import  secureLocalStorage  from  "react-secure-storage"
 
 const Nav = () => {
+    const EmailUser = secureLocalStorage.getItem("Login1");
+    const RoleUser = secureLocalStorage.getItem("Login2");
 
     // usestate for open close nav bar when mobile screen
     const [navOpen, SetNavOpen] = useState(false)
@@ -40,12 +43,31 @@ const Nav = () => {
                         </a>
                     ))
                 }
-                <a href="SignIn">
-                    <div className="flex">
-                        <BsPerson  className='h-6 w-auto'/>
-                        <p className="">SignIn</p>
-                    </div>
-                </a>
+
+                {
+                    (() => {
+                        if(RoleUser !== null && EmailUser !== null){
+                            return (
+                                <a href="Dashboard/home">
+                                    <div className="flex">
+                                        <BsSpeedometer  className='h-6 w-auto'/>
+                                        <p className="">Dashboard</p>
+                                    </div>
+                                </a>
+                            )            
+                        }
+                        else{
+                            return (
+                                <a href="SignIn">
+                                    <div className="flex">
+                                        <BsPerson  className='h-6 w-auto'/>
+                                        <p className="">SignIn</p>
+                                    </div>
+                                </a>
+                            )    
+                        }
+                    })()
+                }
             </ul>
             <div className="md:block hidden md:flex md:justify-between">
                 <div className="">
@@ -65,12 +87,30 @@ const Nav = () => {
                     }
                 </div>
                 <div className="">
-                    <a href="SignIn">
-                        <div className="flex">
-                            <BsPerson  className='h-6 w-auto'/>
-                            <p className="">SignIn</p>
-                        </div>
-                    </a>
+                {
+                    (() => {
+                        if(RoleUser !== null && EmailUser !== null){
+                            return (
+                                <a href="Dashboard/home">
+                                    <div className="flex">
+                                        <BsSpeedometer  className='h-6 w-auto px-2'/>
+                                        <p className="">Dashboard</p>
+                                    </div>
+                                </a>
+                            )            
+                        }
+                        else{
+                            return (
+                                <a href="SignIn">
+                                    <div className="flex">
+                                        <BsPerson  className='h-6 w-auto'/>
+                                        <p className="">SignIn</p>
+                                    </div>
+                                </a>
+                            )    
+                        }
+                    })()
+                }
                 </div>
             </div>
             
