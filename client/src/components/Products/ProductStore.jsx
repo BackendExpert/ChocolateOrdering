@@ -30,7 +30,7 @@ const ProductStore = () => {
             <div className='z-40 md:mt-16 mt-24 md:mx-10 mx-2 relative rounded-3xl bg-center bg-cover'>
                 
             </div>
-            <div className='z-40 md:mt-8 mt-24 md:mx-10 mx-2 relative rounded-3xl bg-center bg-cover'>
+            <div className='z-40 md:mt-20 mt-24 md:mx-10 mx-2 relative rounded-3xl bg-center bg-cover'>
                 <div className="md:grid grid-cols-4 gap-4">
                     {
                         ProductData.map((product, index) => {
