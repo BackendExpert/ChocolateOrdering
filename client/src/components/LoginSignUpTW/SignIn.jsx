@@ -20,12 +20,12 @@ const SignIn = () => {
         // login to system
 
         try{
-            const res = await axios.post('http://localhost:5000/auth/SignIn', LoginData)
+            const res = await axios.post(`${import.meta.env.VITE_SERVER_API}/auth/SignIn`, LoginData)
             .then(res => {
                 if(res.data.Status === "Success"){
                     alert("Login Successfull")
                     localStorage.setItem('token', res.data.Token)
-                    navigate('/Dashboard')
+                    navigate('/Dashboard/Home')
                     // login user Email 
                     secureLocalStorage.setItem('Login1', res.data.Result.email)
                     secureLocalStorage.setItem('Login2', res.data.Result.Role)                    
