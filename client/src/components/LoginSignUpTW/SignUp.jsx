@@ -53,17 +53,17 @@ const SignUp = () => {
                         <div className=""></div>
                         <div className="my-4 bg-white md:py-4 py-4 rounded-xl shadow-md" >
                         <form onSubmit={headleSubmit}>
-                             <div className="my-2 md:mx-8">
+                             <div className="my-2 md:mx-8 mx-4">
                                 <label htmlFor="" className=''>Username : </label>
                                 <input type="text" name="" id="" className="w-full h-12 pl-2 rounded bg-gray-200" required placeholder='Enter Username'
                                 onChange={e => SetSignUpData({...SignUpData, username:e.target.value})}/>
                             </div>
-                            <div className="my-2 md:mx-8">
+                            <div className="my-2 md:mx-8 mx-4">
                                 <label htmlFor="" className=''>Email : </label>
                                 <input type="email" name="" id="" className="w-full h-12 pl-2 rounded bg-gray-200" required placeholder='Enter Email Address'
                                 onChange={e => SetSignUpData({...SignUpData, email:e.target.value})}/>
                             </div>
-                            <div className="my-2 md:mx-8">
+                            <div className="my-2 md:mx-8 mx-4">
                                 <label htmlFor="" className=''>Password : </label>
                                 <input type="password" name="" id="" className="w-full h-12 pl-2 rounded bg-gray-200" required placeholder='Enter Password' 
                                 onChange={e => SetSignUpData({...SignUpData, password:e.target.value})}/>
