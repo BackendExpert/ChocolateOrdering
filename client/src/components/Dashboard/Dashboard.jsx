@@ -18,7 +18,7 @@ const Dashboard = () => {
         return (
             <div className=" w-full min-h-screen md:px-[5%] px-4">       
                 <div className="md:flex">
-                <div className="circlePosition w-[990px] h-[700px] bg-purple-900 rounded-[100%] fixed  z-[-10] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[600px]"></div>
+                <div className="circlePosition w-[990px] h-[700px] bg-yellow-900 rounded-[100%] fixed  z-[-10] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[600px]"></div>
                     <div className="">
                         <DashSide />                        
                     </div>
