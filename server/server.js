@@ -15,7 +15,14 @@ mongoose.connect(process.env.MONGODB_ATLES_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["https://chocolate-ordering.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+))
+
 app.use(express.json())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
