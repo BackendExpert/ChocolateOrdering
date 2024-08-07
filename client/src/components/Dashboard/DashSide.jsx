@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
-import { BsBackpack, BsBagCheck, BsBriefcase, BsClipboard2Data, BsGearFill, BsList, BsPersonGear, BsSpeedometer2, BsUiChecks, BsX } from "react-icons/bs";
+import { BsBackpack, BsBagCheck, BsBoxFill, BsBriefcase, BsClipboard2Data, BsGearFill, BsList, BsPersonGear, BsSpeedometer2, BsUiChecks, BsX } from "react-icons/bs";
 import axios from 'axios';
 
 const DashSide = () => {
@@ -19,7 +19,7 @@ const DashSide = () => {
 
     const SideMenu = [
         {id: 1, name: "Dashboard", link: 'Home', icon: <BsSpeedometer2 />},
-        {id: 2, name: "Job", link: 'Jobs', icon: <BsBriefcase />}, 
+        {id: 2, name: "Items", link: 'Items', icon: <BsBoxFill />}, 
         {id: 3, name: "Job Match", link: 'MatchJobs', icon: <BsUiChecks />}, 
         {id: 4, name: "Job Applied", link: 'ApplyJobs', icon: <BsBagCheck />},
         {id: 5, name: "Skills", link: 'Skills', icon: <BsPersonGear />},
