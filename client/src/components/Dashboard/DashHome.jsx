@@ -1,6 +1,7 @@
 import React from 'react'
 import CountUp from 'react-countup'
 import { Bs0Circle, Bs0SquareFill, BsArrowDownUp, BsBoxSeam, BsCurrencyDollar, BsPeople } from 'react-icons/bs'
+import BarChart from './BarChart'
 
 const DashHome = () => {
     const DashData = [
@@ -47,6 +48,9 @@ const DashHome = () => {
                     )
                   })
                 }
+              </div>
+              <div className="w-full">
+              <BarChart />
               </div>
             </div>
           </div>
