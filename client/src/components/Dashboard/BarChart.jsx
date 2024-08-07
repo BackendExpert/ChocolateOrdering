@@ -19,14 +19,6 @@ const BarChart = () => {
           'rgba(128, 0, 0, 0.2)',    // maroon
           'rgba(153, 101, 21, 0.2)', // darkgoldenrod
         ],
-        borderColor: [
-          'rgba(165, 42, 42, 1)',    // brown
-          'rgba(139, 69, 19, 1)',    // saddlebrown
-          'rgba(210, 105, 30, 1)',   // chocolate
-          'rgba(160, 82, 45, 1)',    // sienna
-          'rgba(128, 0, 0, 1)',      // maroon
-          'rgba(153, 101, 21, 1)',   // darkgoldenrod
-        ],
         borderWidth: 1,
       },
     ],
