@@ -8,6 +8,7 @@ import Nav from "./components/HomePage/Nav";
 import ProductStore from "./components/Products/ProductStore";
 import DashHome from "./components/Dashboard/DashHome";
 import Items from "./components/Items/Items";
+import Orders from "./components/Orders/Orders";
 
 
 function AppWrapper() {
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/Dashboard/" element={<PrivateRoute ProtectRoute={<Dashboard />} />} >
             <Route path="Home" element={<PrivateRoute ProtectRoute={<DashHome /> } /> } />
             <Route path="Items" element={<PrivateRoute ProtectRoute={<Items /> } /> } />
+            <Route path="Orders" element={<PrivateRoute ProtectRoute={<Orders /> } /> } />
           </Route>
         </Routes> 
       </BrowserRouter>

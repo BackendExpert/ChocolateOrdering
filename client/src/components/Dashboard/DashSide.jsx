@@ -20,7 +20,7 @@ const DashSide = () => {
     const SideMenu = [
         {id: 1, name: "Dashboard", link: 'Home', icon: <BsSpeedometer2 />},
         {id: 2, name: "Items", link: 'Items', icon: <BsBoxFill />}, 
-        {id: 3, name: "Job Match", link: 'MatchJobs', icon: <BsUiChecks />}, 
+        {id: 3, name: "Orders ", link: 'Orders', icon: <BsUiChecks />}, 
         {id: 4, name: "Job Applied", link: 'ApplyJobs', icon: <BsBagCheck />},
         {id: 5, name: "Skills", link: 'Skills', icon: <BsPersonGear />},
         {id: 6, name: "Projects", link: 'Projects', icon: <BsClipboard2Data />},
