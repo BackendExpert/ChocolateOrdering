@@ -2,6 +2,8 @@ import React from 'react'
 import CountUp from 'react-countup'
 import { Bs0Circle, Bs0SquareFill, BsArrowDownUp, BsBoxSeam, BsCurrencyDollar, BsPeople } from 'react-icons/bs'
 import BarChart from './BarChart'
+import ProgressBar from './CircularProgressBar'
+import CircularProgressBar from './CircularProgressBar'
 
 const DashHome = () => {
     const DashData = [
@@ -23,6 +25,21 @@ const DashHome = () => {
                 <h1 className="pt-1 pb-3 text-center text-2xl font-semibold text-yellow-900">$1500.00</h1>
                 <p className=""></p>
               </div>
+
+              <div className="rounded shadow-md bg-white my-4 bg-yellow-800 pb-4">
+                  <div className="pt-8 pb-4  flex items-center justify-center">
+                  <CircularProgressBar
+                      value={90}
+                      max={100}
+                      size={100}
+                      strokeWidth={12}
+                      color="text-white"
+                    />
+                  </div>    
+                  <h1 className="text-center text-xl font-semibold text-white">1500/2000</h1>
+                  <p className="text-center text-white">Monthly Income</p>              
+              </div>
+              
 
             </div>
 
