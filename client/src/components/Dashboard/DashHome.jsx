@@ -9,14 +9,6 @@ const DashHome = () => {
       {id: 3, name: "Customers", value: <CountUp end={20} />, icons: <BsPeople className="h-12 w-auto"/> },      
     ]
 
-    const BestChocos = [
-      {id: 1, name: "Royel Chocolets", image: "https://wallpapercave.com/wp/1Pm7E5e.jpg"},
-      {id: 2, name: "Royel Chocolets", image: "https://wallpapercave.com/wp/1Pm7E5e.jpg"},
-      {id: 3, name: "Royel Chocolets", image: "https://wallpapercave.com/wp/1Pm7E5e.jpg"},
-      {id: 4, name: "Royel Chocolets", image: "https://wallpapercave.com/wp/1Pm7E5e.jpg"},
-      {id: 5, name: "Royel Chocolets", image: "https://wallpapercave.com/wp/1Pm7E5e.jpg"}      
-    ]
-
   return (
     <div className="">
         <div className="">
@@ -30,12 +22,7 @@ const DashHome = () => {
                 <h1 className="pt-1 pb-3 text-center text-2xl font-semibold text-yellow-900">$1500.00</h1>
                 <p className=""></p>
               </div>
-              <div className="bg-white my-2 py-4 px-6 rounded shadow-md bg-yellow-800/20">
-                <div className=" py-2 pl-2 rounded border-l-4 border-yellow-800">
-                  <h1 className="text-xl font-semibold text-yellow-800">Best Menus</h1>
-                  <h1 className=" font-semibold text-yellow-800">By Customers</h1>
-                </div>
-              </div>
+
             </div>
 
 
@@ -52,8 +39,7 @@ const DashHome = () => {
                             <h1 className="text-xl py-2">{dash.name}</h1>
                             </div>
                             <div className="mr-4">
-                              {dash.icons}
-                              
+                              {dash.icons}                              
                             </div>
                           </div>
                         </div>
