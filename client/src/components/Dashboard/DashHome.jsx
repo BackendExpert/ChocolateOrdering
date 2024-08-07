@@ -9,13 +9,21 @@ const DashHome = () => {
       {id: 3, name: "Customers", value: <CountUp end={20} />, icons: <BsPeople className="h-12 w-auto"/> },      
     ]
 
+    const BestChocos = [
+      {id: 1, name: "Royel Chocolets", image: "https://wallpapercave.com/wp/1Pm7E5e.jpg"},
+      {id: 2, name: "Royel Chocolets", image: "https://wallpapercave.com/wp/1Pm7E5e.jpg"},
+      {id: 3, name: "Royel Chocolets", image: "https://wallpapercave.com/wp/1Pm7E5e.jpg"},
+      {id: 4, name: "Royel Chocolets", image: "https://wallpapercave.com/wp/1Pm7E5e.jpg"},
+      {id: 5, name: "Royel Chocolets", image: "https://wallpapercave.com/wp/1Pm7E5e.jpg"}      
+    ]
+
   return (
     <div className="">
         <div className="">
           <h1 className="text-xl font-semibold text-yellow-800">Dashboard</h1>
 
           <div className="md:flex">
-            <div className="md:w-1/4 ">
+            <div className="md:w-1/3 ">
               <div className="bg-white py-4 px-8 rounded shadow-md mt-4">
                 <center><BsCurrencyDollar className='h-36 w-auto text-yellow-800 '/></center>
                 <h1 className="pt-4 pb-1 text-xl font-semibold text-yellow-900 text-center">Monthly Income</h1>
@@ -24,7 +32,7 @@ const DashHome = () => {
               </div>
               <div className="bg-white my-2 py-4 px-6 rounded shadow-md bg-yellow-800/20">
                 <div className=" py-2 pl-2 rounded border-l-4 border-yellow-800">
-                  <h1 className="text-xl font-semibold text-yellow-800">Trending Chocolets</h1>
+                  <h1 className="text-xl font-semibold text-yellow-800">Best Menus</h1>
                   <h1 className=" font-semibold text-yellow-800">By Customers</h1>
                 </div>
               </div>
