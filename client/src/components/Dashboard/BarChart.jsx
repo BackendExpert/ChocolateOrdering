@@ -4,6 +4,7 @@ import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
 
 const BarChart = () => {
+    
   // Sample data with brown shades
   const data = {
     labels: ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 6'],
@@ -13,11 +14,11 @@ const BarChart = () => {
         data: [12, 19, 3, 5, 2, 3],
         backgroundColor: [
           '#964B00',  // brown
-          'rgba(139, 69, 19, 0.2)',  // saddlebrown
-          'rgba(210, 105, 30, 0.2)', // chocolate
-          'rgba(160, 82, 45, 0.2)',  // sienna
-          'rgba(128, 0, 0, 0.2)',    // maroon
-          'rgba(153, 101, 21, 0.2)', // darkgoldenrod
+          '#964B00',  // saddlebrown
+          '#964B00', // chocolate
+          '#964B00',  // sienna
+          '#964B00',    // maroon
+          '#964B00', // darkgoldenrod
         ],
         borderWidth: 1,
       },
@@ -26,14 +27,22 @@ const BarChart = () => {
 
   const options = {
     scales: {
+      x: {
+        grid: {
+          display: false, // Hide grid lines on x-axis
+        },
+      },
       y: {
+        grid: {
+          display: false, // Hide grid lines on y-axis
+        },
         beginAtZero: true,
       },
     },
   };
 
   return (
-    <div className="w-full h-[300px] m-4 p-4 bg-white">
+    <div className="w-full h-[300px] m-4 p-4 bg-white rounded shadow-md">
       <Bar data={data} options={options} />
     </div>
   );
