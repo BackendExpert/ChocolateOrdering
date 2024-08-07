@@ -1,13 +1,13 @@
 import React from 'react'
 import CountUp from 'react-countup'
-import { BsBoxFill } from 'react-icons/bs'
+import { BsBoxFill, BsPlusSquareFill } from 'react-icons/bs'
 
 const ItemsData = () => {
     const ItemsNav = [
         {id: 1, link:"AllItems", value: <CountUp end={20} />, name: "Items", icon: <BsBoxFill className='h-8 w-auto'/>},
         {id: 2, link:"AllItems", value: <CountUp end={20} />, name: "Items", icon: <BsBoxFill className='h-8 w-auto'/>},
         {id: 3, link:"AllItems", value: <CountUp end={20} />, name: "Items", icon: <BsBoxFill className='h-8 w-auto'/>},        
-        {id: 3, link:"AllItems", value: "#", name: "Add Items", icon: <BsBoxFill className='h-8 w-auto'/>}, 
+        {id: 3, link:"AddItems", value: "#", name: "Add Items", icon: <BsPlusSquareFill className='h-8 w-auto'/>}, 
     ]
   return (
     <div>
@@ -15,17 +15,19 @@ const ItemsData = () => {
             {
                 ItemsNav.map((itmes, index) => {
                     return (
-                        <div className="bg-yellow-800 rounded shadow-md text-white py-4 px-4" key={index}>
-                            <div className="flex justify-between">
-                                <div className="">
-                                    <p className="text-2xl">{itmes.value}</p>
-                                    <p className="text-xl">{itmes.name}</p>
-                                </div>
-                                <div className="mt-4 mr-4">
-                                    {itmes.icon}
+                        <a href={itmes.link}>
+                            <div className="bg-yellow-800 rounded shadow-md text-white py-4 px-4" key={index}>
+                                <div className="flex justify-between">
+                                    <div className="">
+                                        <p className="text-2xl">{itmes.value}</p>
+                                        <p className="text-xl">{itmes.name}</p>
+                                    </div>
+                                    <div className="mt-4 mr-4">
+                                        {itmes.icon}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     )
                 })
             }

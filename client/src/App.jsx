@@ -9,6 +9,7 @@ import ProductStore from "./components/Products/ProductStore";
 import DashHome from "./components/Dashboard/DashHome";
 import Items from "./components/Items/Items";
 import Orders from "./components/Orders/Orders";
+import AddItems from "./components/Items/AddItems";
 
 
 function AppWrapper() {
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="Home" element={<PrivateRoute ProtectRoute={<DashHome /> } /> } />
             <Route path="Items" element={<PrivateRoute ProtectRoute={<Items /> } /> } />
             <Route path="Orders" element={<PrivateRoute ProtectRoute={<Orders /> } /> } />
+            <Route path="AddItems" element={<PrivateRoute ProtectRoute={<AddItems /> } /> } />
           </Route>
         </Routes> 
       </BrowserRouter>
