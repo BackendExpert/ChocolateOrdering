@@ -9,17 +9,22 @@ const ItemController = {
             ItemDesc
         } = req.body
 
-        console.log(req.body)
+        // console.log(req.body)
 
 
-        // const checkItems = await Item.find({ ItemNumber: ItemNumber})
+        const checkItems = await Item.find({ ItemNumber: ItemNumber})
 
-        // if(checkItems) {
-        //     return res.json({ Error: "Item Already Exists"})
-        // }
-        // else{
-        //     console.log()
-        // }
+        if(checkItems) {
+            return res.json({ Error: "Item Already Exists"})
+        }
+        else{
+            const NewItems = new Item({
+                ItemNumber: ItemNumber,
+                ItemName: ItemName,
+                ItemPrice: ItemPrice,
+                ItemDesc: ItemDesc
+            })
+        }
 
     }
 };
