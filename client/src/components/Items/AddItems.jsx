@@ -15,8 +15,20 @@ const AddItems = () => {
     const headleSubmit = async (e) => {
       e.preventDefault();
 
+      const DataItem = new FormData()
+
+      DataItem.append('ItemNumber', ItemData.ItemNumber);
+      DataItem.append('ItemName', ItemData.ItemName);
+      DataItem.append('ItemPrice', ItemData.ItemPrice);
+      DataItem.append('Itemimg', ItemData.ItemImg);
+      DataItem.append('ItesmDesc', ItemData.ItemDesc);
+
       try{
-        const res = await axios.post(`${import.meta.env.VITE_SERVER_API}/Items/AddItems`, ItemData)
+        const res = await axios.post(`${import.meta.env.VITE_SERVER_API}/Items/AddItems`, DataItem, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          }
+        })
         .then(res => {
           if(res.data.Status === "Success"){
             alert("Item Added Successfully")
