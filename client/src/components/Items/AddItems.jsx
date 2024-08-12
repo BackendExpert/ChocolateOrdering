@@ -8,7 +8,7 @@ const AddItems = () => {
         ItemNumber: '',
         ItemName: '',
         ItemPrice: '',
-        ItemImg: '',
+        image: '',
         ItemDesc: ''
     })
 
@@ -20,7 +20,7 @@ const AddItems = () => {
       DataItem.append('ItemNumber', ItemData.ItemNumber);
       DataItem.append('ItemName', ItemData.ItemName);
       DataItem.append('ItemPrice', ItemData.ItemPrice);
-      DataItem.append('image', ItemData.ItemImg);
+      DataItem.append('image', ItemData.image);
       DataItem.append('ItesmDesc', ItemData.ItemDesc);
 
       try{
@@ -67,7 +67,7 @@ const AddItems = () => {
                   </div>
                   <div className="">
                     <input type="file" name="image" id="" className="h-12 w-full bg-gray-200 pl-2 rounded mt-4" required placeholder='Item image'
-                    onChange={e => SetItemData({...ItemData, ItemImg:e.target.files[0]})}/>
+                    onChange={e => SetItemData({...ItemData, image:e.target.files[0]})}/>
                   </div>
                   <div className="">
                       <textarea name='ItesmDesc' className='w-full h-24 rounded bg-gray-200 my-4 pl-2' placeholder='Item Description' required

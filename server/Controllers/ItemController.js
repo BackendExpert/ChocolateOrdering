@@ -12,10 +12,10 @@ const ItemController = {
 
         const Itemimg = req.file.path
 
-        // console.log(req.body, Itemimg)
+        console.log(req.body, Itemimg)
 
 
-        const checkItems = await Item.find({ ItemNumber: ItemNumber})
+        const checkItems = await Item.findOne({ ItemNumber: ItemNumber })
 
         if(checkItems) {
             return res.json({ Error: "Item Already Exists"})
@@ -23,10 +23,10 @@ const ItemController = {
         else{
             const NewItems = new Item({
                 ItemNumber: ItemNumber,
+                ItemImage: Itemimg,
                 ItemName: ItemName,
                 ItemPrice: ItemPrice,
                 ItemDesc: ItemDesc,
-                ItemImage: Itemimg
             })
 
             const NewItemsResult = await NewItems.save()
