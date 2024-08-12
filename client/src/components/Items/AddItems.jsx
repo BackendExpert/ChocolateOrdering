@@ -38,6 +38,7 @@ const AddItems = () => {
             alert(res.data.Error)
           }
         })
+        .catch(err => console.log(err))
       }
       catch (err) {
         console.log(err)
