@@ -1,10 +1,20 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import CountUp from 'react-countup'
 import { BsBoxFill, BsPlusSquareFill } from 'react-icons/bs'
 
+
 const ItemsData = () => {
+    const [countItems, SetCountItems] = useState(0)
+
+    useEffect(() => {
+        axios.get(`${import.meta.env.VITE_SERVER_API}/Items/CoutItems`)
+        .then(res => SetCountItems(res.data.Result))
+        .catch(err => console.log(err))
+    }, [])
+
     const ItemsNav = [
-        {id: 1, link:"Items", value: <CountUp end={20} />, name: "Items", icon: <BsBoxFill className='h-8 w-auto'/>},
+        {id: 1, link:"Items", value: <CountUp end={countItems} />, name: "Items", icon: <BsBoxFill className='h-8 w-auto'/>},
         {id: 2, link:"AllItems", value: <CountUp end={20} />, name: "In Stock ", icon: <BsBoxFill className='h-8 w-auto'/>},
         {id: 3, link:"AllItems", value: <CountUp end={20} />, name: "Out of Stock ", icon: <BsBoxFill className='h-8 w-auto'/>},        
         {id: 3, link:"AddItems", value: "#", name: "Add Items", icon: <BsPlusSquareFill className='h-8 w-auto'/>}, 

@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CountUp from 'react-countup'
 import { Bs0Circle, Bs0SquareFill, BsArrowDownUp, BsBoxSeam, BsCurrencyDollar, BsPeople } from 'react-icons/bs'
 import BarChart from './BarChart'
 import ProgressBar from './CircularProgressBar'
 import CircularProgressBar from './CircularProgressBar'
+import axios from 'axios'
+
 
 const DashHome = () => {
+
+    const [countItems, SetCountItems] = useState(0)
+
+    useEffect(() => {
+        axios.get(`${import.meta.env.VITE_SERVER_API}/Items/CoutItems`)
+        .then(res => SetCountItems(res.data.Result))
+        .catch(err => console.log(err))
+    }, [])
+
     const DashData = [
-      {id: 1, name: "Items", value: <CountUp end={20} />, icons: <BsBoxSeam className="h-12 w-auto"/> },
+      {id: 1, name: "Items", value: <CountUp end={countItems} />, icons: <BsBoxSeam className="h-12 w-auto"/> },
       {id: 2, name: "Orders", value: <CountUp end={20} />, icons: <BsArrowDownUp className="h-12 w-auto"/> },      
       {id: 3, name: "Customers", value: <CountUp end={20} />, icons: <BsPeople className="h-12 w-auto"/> },      
     ]

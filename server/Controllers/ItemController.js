@@ -37,6 +37,17 @@ const ItemController = {
                 return res.json({ Error: "Internal Server Error"})
             }
         }
+    },
+
+    CountItems: async(req, res) => {
+        const CountItems = await Item.countDocuments()
+
+        if(CountItems){
+            return res.json({ Result: CountItems })
+        }
+        else{
+            return res.json({ Error: "Internal Server Error"})
+        }
     }
 };
 
