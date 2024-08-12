@@ -1,6 +1,6 @@
 const Item = require("../Models/Item");
 
-const defaultController = {
+const ItemController = {
     AddItems: async (req, res) => {
         const {
             ItemNumber,
@@ -24,4 +24,4 @@ const defaultController = {
     }
 };
 
-module.exports = defaultController;
+module.exports = ItemController;

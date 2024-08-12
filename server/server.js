@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 
 
 const AuthRoute = require('./Routes/AuthRoute')
+const ItemRoute = require('./Routes/ItemRoute')
 
 const app = express();
 const PORT = process.env.PORT || 5000
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
 })
 
 app.use('/auth', AuthRoute)
+app.use('/Items', ItemRoute)
 
 app.listen(PORT, () => {
     console.log(`Server Running on PORT ${PORT}`)
