@@ -7,7 +7,8 @@ const ItemController = {
             ItemNumber,
             ItemName,
             ItemPrice,
-            ItesmDesc
+            ItesmDesc,
+            Stock
         } = req.body
 
         const image = req.file.path
@@ -18,7 +19,23 @@ const ItemController = {
             return res.json({ Error: "Item Already Exists" })
         }
         else{
-            return res.json({ Status: "Success"})
+            const AddItem = new Item({
+                ItemNumber: ItemNumber,
+                ItemImage: image,
+                ItemName: ItemName,
+                ItemPrice: ItemPrice,
+                ItemDesc: ItesmDesc,
+                Stock: Stock
+            })
+
+            const ResultItem = await AddItem.save()
+
+            if(ResultItem){
+                return res.json({ Status: "Success"})
+            }
+            else{
+                return res.json({ Error: "Internal Server Error"})
+            }
         }
     }
 };

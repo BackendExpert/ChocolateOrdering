@@ -9,7 +9,8 @@ const AddItems = () => {
         ItemName: '',
         ItemPrice: '',
         image: '',
-        ItemDesc: ''
+        ItemDesc: '',
+        Stock: ''
     })
 
     const headleSubmit = async (e) => {
@@ -22,6 +23,7 @@ const AddItems = () => {
       DataItem.append('ItemPrice', ItemData.ItemPrice);
       DataItem.append('image', ItemData.image);
       DataItem.append('ItesmDesc', ItemData.ItemDesc);
+      DataItem.append('Stock', ItemData.Stock);
 
       try{
         const res = await axios.post(`${import.meta.env.VITE_SERVER_API}/Items/AddItems`, DataItem, {
@@ -62,8 +64,12 @@ const AddItems = () => {
                       onChange={e => SetItemData({...ItemData, ItemName:e.target.value})}/>
                     </div>
                     <div className="">
-                        <input type="number" name="ItemPrice" id="" className="h-12 w-full bg-gray-200 pl-2 rounded md:my-0 my-2" required placeholder='Item Price'
+                      <input type="number" name="ItemPrice" id="" className="h-12 w-full bg-gray-200 pl-2 rounded md:my-0 my-2" required placeholder='Item Price'
                       onChange={e => SetItemData({...ItemData, ItemPrice:e.target.value})}/>
+                    </div>
+                    <div className="">
+                      <input type="number" name="Stock" id="" className="h-12 w-full bg-gray-200 pl-2 rounded md:my-0 my-2" required placeholder='Item Stock'
+                      onChange={e => SetItemData({...ItemData, Stock:e.target.value})}/>
                     </div>
                   </div>
                   <div className="">
