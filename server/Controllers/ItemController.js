@@ -48,6 +48,17 @@ const ItemController = {
         else{
             return res.json({ Error: "Internal Server Error"})
         }
+    },
+
+    AllItemsGet: async(req, res) => {
+        const AllItems = await Item.find()
+
+        if(AllItems){
+            return res.json({ Result: AllItems })
+        }        
+        else{
+            return res.json({ Error: "Internal Server Error"})
+        }
     }
 };
 

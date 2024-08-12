@@ -18,5 +18,6 @@ const upload = multer({ storage });
 
 router.post('/AddItems', upload.single('image'), ItemController.AddItems)
 router.get('/CoutItems', ItemController.CountItems)
+router.get('/GetAllItems', ItemController.AllItemsGet)
 
 module.exports = router;

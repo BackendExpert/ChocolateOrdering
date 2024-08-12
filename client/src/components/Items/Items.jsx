@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemsData from './ItemsData'
+import axios from 'axios'
 
 const Items = () => {
+    const [AllItems, SetAllItems] = useState([])
+
+    useEffect(() => {
+      axios.get(`${import.meta.env.VITE_SERVER_API}/Items/GetAllItems`)
+      .then(res => SetAllItems(res.data.Result))
+      .catch(err => console.log(err))
+    }, [])
+
   return (
     <div>
         <div className="">
