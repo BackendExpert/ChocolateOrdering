@@ -66,8 +66,8 @@ const AddItems = () => {
                     </div>
                   </div>
                   <div className="">
-                    <input type="file" name="Itemimg" id="" className="h-12 w-full bg-gray-200 pl-2 rounded mt-4" required placeholder='Item Price'
-                    onChange={e => SetItemData({...ItemData, ItemPrice:e.target.value})}/>
+                    <input type="file" name="Itemimg" id="" className="h-12 w-full bg-gray-200 pl-2 rounded mt-4" required placeholder='Item image'
+                    onChange={e => SetItemData({...ItemData, ItemPrice:e.target.files[0]})}/>
                   </div>
                   <div className="">
                       <textarea name='ItesmDesc' className='w-full h-24 rounded bg-gray-200 my-4 pl-2' placeholder='Item Description' required
