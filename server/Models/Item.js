@@ -6,6 +6,10 @@ const ItemSchema = new mongoose.Schema({
         required: true,
         unique:true,
     },
+    ItemImage: {
+        type: String,
+        required: true,
+    },
     ItemName: {
         type: String,
         required: true,
