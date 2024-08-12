@@ -10,9 +10,9 @@ const ItemController = {
             ItemDesc
         } = req.body
 
-        const Itemimg = req.file.path
+        // const Itemimg = req.file.path
 
-        console.log(req.body, Itemimg)
+        console.log(req.body)
 
 
         // const checkItems = await Item.find({ ItemNumber: ItemNumber})
