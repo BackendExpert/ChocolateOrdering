@@ -24,6 +24,15 @@ const ItemController = {
                 ItemPrice: ItemPrice,
                 ItemDesc: ItemDesc
             })
+
+            const NewItemsResult = await NewItems.save()
+
+            if(NewItemsResult){
+                return res.json({ Status: "Success" })
+            }
+            else{
+                return res.json({ Error: "Internal Server Error"})
+            }
         }
 
     }
