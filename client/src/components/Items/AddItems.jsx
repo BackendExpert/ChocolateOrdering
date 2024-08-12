@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ItemsData from './ItemsData'
 
 const AddItems = () => {
+    const [ItemsData, SetItemDate] = useState({
+      
+    })
+
     const headleSubmit = (e) => {
       e.preventDefault();
     }
