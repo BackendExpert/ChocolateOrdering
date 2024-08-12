@@ -16,7 +16,7 @@ const ItemsData = () => {
                 ItemsNav.map((itmes, index) => {
                     return (
                         <a href={itmes.link}>
-                            <div className="bg-yellow-800 rounded shadow-md text-white py-4 px-4" key={index}>
+                            <div className="bg-yellow-800 rounded shadow-md text-white py-4 px-4 md:my-0 my-2" key={index}>
                                 <div className="flex justify-between">
                                     <div className="">
                                         <p className="text-2xl">{itmes.value}</p>

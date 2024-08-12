@@ -8,6 +8,7 @@ const AddItems = () => {
         ItemNumber: '',
         ItemName: '',
         ItemPrice: '',
+        ItemImg: '',
         ItemDesc: ''
     })
 
@@ -40,17 +41,21 @@ const AddItems = () => {
               <form onSubmit={headleSubmit} method="post">
                   <div className="md:grid grid-cols-3 gap-4">
                     <div className="">
-                      <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" required placeholder='Item Number'
+                      <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded md:my-0 my-2" required placeholder='Item Number'
                       onChange={e => SetItemData({...ItemData, ItemNumber:e.target.value})}/>
                     </div>
                     <div className="">
-                      <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" required placeholder='Item Name'
+                      <input type="text" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded md:my-0 my-2" required placeholder='Item Name'
                       onChange={e => SetItemData({...ItemData, ItemName:e.target.value})}/>
                     </div>
                     <div className="">
-                        <input type="number" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded" required placeholder='Item Price'
+                        <input type="number" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded md:my-0 my-2" required placeholder='Item Price'
                       onChange={e => SetItemData({...ItemData, ItemPrice:e.target.value})}/>
                     </div>
+                  </div>
+                  <div className="">
+                    <input type="file" name="" id="" className="h-12 w-full bg-gray-200 pl-2 rounded mt-4" required placeholder='Item Price'
+                    onChange={e => SetItemData({...ItemData, ItemPrice:e.target.value})}/>
                   </div>
                   <div className="">
                       <textarea className='w-full h-24 rounded bg-gray-200 my-4 pl-2' placeholder='Item Description' required
