@@ -61,6 +61,24 @@ const ItemController = {
         }
     },
     
+    OneItemGet: async(req, res) => {
+        try{
+            const ItemID = req.params.id
+
+            const ItemsData = Item.findOne({ ItemNumber: ItemID })
+
+            if(ItemsData) {
+                return res.json({ Result: ItemsData })
+            }
+            else{
+                return res.json({ Error: "Internal Server Error"})
+            }
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
+
 };
 
 module.exports = ItemController;
