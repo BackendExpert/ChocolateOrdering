@@ -76,7 +76,7 @@ const ProductStore = () => {
                                             
                                         </div>  
                                         
-                                        <a href={`ViewProduct/`+ product.ItemNumber }>
+                                        <a href={'/ViewProduct/' + product.ItemNumber}>
                                             <button className='bg-yellow-800 py-2 px-8 rounded mt-6 w-full text-white'>View More</button>
                                         </a>                                                         
                                     </div>

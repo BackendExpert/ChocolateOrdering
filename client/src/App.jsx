@@ -36,12 +36,12 @@ export default function App() {
           <Route path="/ProductStore" element={<ProductStore /> } />
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp /> } />
+          <Route path="/ViewProduct/:id" element={<ViewProduct /> } />
           <Route path="/Dashboard/" element={<PrivateRoute ProtectRoute={<Dashboard />} />} >
             <Route path="Home" element={<PrivateRoute ProtectRoute={<DashHome /> } /> } />
             <Route path="Items" element={<PrivateRoute ProtectRoute={<Items /> } /> } />
             <Route path="Orders" element={<PrivateRoute ProtectRoute={<Orders /> } /> } />
             <Route path="AddItems" element={<PrivateRoute ProtectRoute={<AddItems /> } /> } />
-            <Route path="ViewProduct/:id" element={<PrivateRoute ProtectRoute={<ViewProduct /> } /> } />
           </Route>
         </Routes> 
       </BrowserRouter>
