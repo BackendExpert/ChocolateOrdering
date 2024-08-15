@@ -65,7 +65,7 @@ const ItemController = {
         try{
             const ItemID = req.params.id
             // console.log(ItemID)
-            const ItemsData = Item.findOne({ ItemNumber: ItemID })
+            const ItemsData = await Item.findOne({ ItemNumber: ItemID })
 
             if(ItemsData) {
                 return res.json({ Result: ItemsData })
