@@ -41,7 +41,7 @@ export default function App() {
             <Route path="Items" element={<PrivateRoute ProtectRoute={<Items /> } /> } />
             <Route path="Orders" element={<PrivateRoute ProtectRoute={<Orders /> } /> } />
             <Route path="AddItems" element={<PrivateRoute ProtectRoute={<AddItems /> } /> } />
-            <Route path="ViewProduct" element={<PrivateRoute ProtectRoute={<ViewProduct /> } /> } />
+            <Route path="ViewProduct/:id" element={<PrivateRoute ProtectRoute={<ViewProduct /> } /> } />
           </Route>
         </Routes> 
       </BrowserRouter>
