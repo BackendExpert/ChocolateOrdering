@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import BgImg from '../../assets/BgImg.jpg'
 import { BsCartFill, BsFacebook, BsHouseFill } from 'react-icons/bs'
 import Footer from '../HomePage/Footer'
+import axios from 'axios'
 
 
 const ProductStore = () => {
@@ -11,19 +12,14 @@ const ProductStore = () => {
         backgroundPosition: 'center',
     }
 
-    const ProductData = [
-        {id: 1, Image: "https://wallpapercave.com/wp/1Pm7E5e.jpg", Name: "Royel Chocolates", price: "$ 250.00", Stock: "in-Stock", Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente, officiis repudiandae id quia fugit minus mollitia doloribus placeat distinctio consequatur quibusdam natus possimus perferendis provident nulla nesciunt harum pariatur."},
-        {id: 2, Image: "https://wallpapercave.com/wp/1Pm7E5e.jpg", Name: "Royel Chocolates", price: "$ 250.00", Stock: "Out of Stock", Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente, officiis repudiandae id quia fugit minus mollitia doloribus placeat distinctio consequatur quibusdam natus possimus perferendis provident nulla nesciunt harum pariatur."},
-        {id: 3, Image: "https://wallpapercave.com/wp/1Pm7E5e.jpg", Name: "Royel Chocolates", price: "$ 250.00", Stock: "in-Stock", Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente, officiis repudiandae id quia fugit minus mollitia doloribus placeat distinctio consequatur quibusdam natus possimus perferendis provident nulla nesciunt harum pariatur."},
-        {id: 4, Image: "https://wallpapercave.com/wp/1Pm7E5e.jpg", Name: "Royel Chocolates", price: "$ 250.00", Stock: "Out of Stock", Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente, officiis repudiandae id quia fugit minus mollitia doloribus placeat distinctio consequatur quibusdam natus possimus perferendis provident nulla nesciunt harum pariatur."},
-        {id: 5, Image: "https://wallpapercave.com/wp/1Pm7E5e.jpg", Name: "Royel Chocolates", price: "$ 250.00", Stock: "in-Stock", Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente, officiis repudiandae id quia fugit minus mollitia doloribus placeat distinctio consequatur quibusdam natus possimus perferendis provident nulla nesciunt harum pariatur."},
-        {id: 6, Image: "https://wallpapercave.com/wp/1Pm7E5e.jpg", Name: "Royel Chocolates", price: "$ 250.00", Stock: "Out of Stock", Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente, officiis repudiandae id quia fugit minus mollitia doloribus placeat distinctio consequatur quibusdam natus possimus perferendis provident nulla nesciunt harum pariatur."},
-        {id: 7, Image: "https://wallpapercave.com/wp/1Pm7E5e.jpg", Name: "Royel Chocolates", price: "$ 250.00", Stock: "in-Stock", Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente, officiis repudiandae id quia fugit minus mollitia doloribus placeat distinctio consequatur quibusdam natus possimus perferendis provident nulla nesciunt harum pariatur."},
-        {id: 8, Image: "https://wallpapercave.com/wp/1Pm7E5e.jpg", Name: "Royel Chocolates", price: "$ 250.00", Stock: "Out of Stock", Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente, officiis repudiandae id quia fugit minus mollitia doloribus placeat distinctio consequatur quibusdam natus possimus perferendis provident nulla nesciunt harum pariatur."},
-        {id: 9, Image: "https://wallpapercave.com/wp/1Pm7E5e.jpg", Name: "Royel Chocolates", price: "$ 250.00", Stock: "in-Stock", Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente, officiis repudiandae id quia fugit minus mollitia doloribus placeat distinctio consequatur quibusdam natus possimus perferendis provident nulla nesciunt harum pariatur."},
-        {id: 10, Image: "https://wallpapercave.com/wp/1Pm7E5e.jpg", Name: "Royel Chocolates", price: "$ 250.00", Stock: "Out of Stock", Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente, officiis repudiandae id quia fugit minus mollitia doloribus placeat distinctio consequatur quibusdam natus possimus perferendis provident nulla nesciunt harum pariatur."},
-        
-    ]
+    const [ProductData, SetProductData] = useState([])
+
+    useEffect(() => {
+        axios.get(`${import.meta.env.VITE_SERVER_API}/Items/GetAllItems`)
+        .then(res => SetProductData(res.data.Result))
+        .catch(err => console.log(err))
+    }, [])
+
   return (
     <div className="bg-cover bg-center min-h-screen py-4 relative ">
         <div className="-mt-4 fixed min-h-screen w-full left-0 right-0 border-b p-4 z-60 border-yellow-800 bg-cover bg-center" style={styles}>           
@@ -52,35 +48,37 @@ const ProductStore = () => {
                             return(
                                 <div className="bg-white py-8 px-4 shadow-md rounded-xl md:my-0 my-4" key={index}>
                                     <div className="flex justify-center items-center">
-                                        <img src={product.Image} alt="Centered" className="max-w-full h-40" />
+                                        <img src={`${import.meta.env.VITE_SERVER_API}/${product.ItemImage}`} alt="Centered" className="max-w-full h-40" />
                                     </div>
             
                                     <div className="px-4 py-6">
-                                        <h1 className="text-xl text-yellow-800 font-semibold">{product.Name}</h1>
+                                        <h1 className="text-xl text-yellow-800 font-semibold">{product.ItemName}</h1>
                                         <p className="py-4">
-                                            {product.Desc}
+                                            {product.ItemDesc}
                                         </p>
             
                                         <div className="flex justify-between">
-                                            <h1 className="text-xl text-yellow-800 font-semibold">{product.price}</h1>
+                                            <h1 className="text-xl text-yellow-800 font-semibold">$ {product.ItemPrice}.00</h1>
                                             {
                                                 (() => {
-                                                    if(product.Stock === "Out of Stock"){
+                                                    if(product.Stock === 0){
                                                         return (
-                                                            <h1 className="text-xl text-red-700 font-semibold">{product.Stock}</h1>
+                                                            <h1 className="text-xl text-red-700 font-semibold">Out of Stock</h1>
                                                         )
                                                     }
                                                     else{
                                                         return (
-                                                            <h1 className="text-xl text-yellow-800 font-semibold">{product.Stock}</h1>
+                                                            <h1 className="text-xl text-yellow-800 font-semibold">In-Stock</h1>
                                                         )
                                                     }
                                                 })()
                                             }
                                             
                                         </div>  
-            
-                                        <button className='bg-yellow-800 py-2 px-8 rounded mt-6 w-full text-white'>View More</button>                 
+                                        
+                                        <a href="">
+                                            <button className='bg-yellow-800 py-2 px-8 rounded mt-6 w-full text-white'>View More</button>
+                                        </a>                                                         
                                     </div>
                                 </div>
                             )
