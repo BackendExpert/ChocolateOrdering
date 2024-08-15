@@ -22,6 +22,11 @@ const ViewProduct = () => {
                 </div>
             </div>
             <div className="md:mt-12 mt-2 ml-2">
+                <div className="">
+                    <a href="../ProductStore">
+                        <button className='bg-blue-500 text-white rounded py-2 px-4 mb-4'>Back</button>
+                    </a>
+                </div>
                 <p className="">{GetProduct.ItemDesc}</p>
                 <div className="my-8">
                     <div className="flex justify-between">
