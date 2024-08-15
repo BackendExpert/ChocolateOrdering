@@ -13,10 +13,10 @@ const ViewProduct = () => {
         .catch(err => console.log(err))
     }, [])
   return (
-    <div className='bg-yellow-800/20 w-full min-h-screen py-8'>
+    <div className='bg-yellow-800/20 w-full min-h-screen py-8 md:px-16 px-4'>
         <div className="md:grid grid-cols-2 gap-4">
             <div className="">
-                
+                <h1 className="text-3xl font-semibold">{GetProduct.ItemName}</h1>
             </div>
         </div>
     </div>
