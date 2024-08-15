@@ -64,7 +64,7 @@ const ItemController = {
     OneItemGet: async(req, res) => {
         try{
             const ItemID = req.params.id
-
+            // console.log(ItemID)
             const ItemsData = Item.findOne({ ItemNumber: ItemID })
 
             if(ItemsData) {
